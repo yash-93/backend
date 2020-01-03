@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Todo(models.Model):
+class Login(models.Model):
     title = models.CharField(max_length=120)
     description = models.TextField()
     completed = models.CharField(max_length=5)
