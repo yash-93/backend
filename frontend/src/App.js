@@ -14,7 +14,7 @@ class App extends Component{
   }
 
   handleChange(event){
-    this.setState({title: event.target.value, description: event.target.value, completed: event.target.value});
+    this.setState({[event.target.name]: event.target.value});
   }
 
   handleSubmit(event){
@@ -28,15 +28,15 @@ class App extends Component{
        <form onSubmit={this.handleSubmit}>
          <label>
            Title : 
-           <input type="text" value={this.state.value} onChange={this.handleChange} />
+           <input name="title" type="text" value={this.state.value} onChange={this.handleChange} />
          </label>
          <label>
            Description : 
-           <input type="text" value={this.state.value} onChange={this.handleChange} />
+           <input name="description" type="text" value={this.state.value} onChange={this.handleChange} />
          </label>
          <label>
            Completed : 
-           <input type="text" value={this.state.value} onChange={this.handleChange} />
+           <input name="completed" type="text" value={this.state.value} onChange={this.handleChange} />
          </label>
          <input type="submit" value="Submit" />
        </form>
