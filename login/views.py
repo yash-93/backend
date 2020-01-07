@@ -4,6 +4,6 @@ from .serializers import LoginSerializer
 from .models import Login
 
 # Create your views here.
-class TodoView(viewsets.ModelViewSet):
+class LoginView(viewsets.ModelViewSet):
     serializer_class = LoginSerializer
     queryset = Login.objects.all()
